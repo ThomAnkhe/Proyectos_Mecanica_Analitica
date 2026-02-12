@@ -1,0 +1,212 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+
+\usepackage[colorlinks = true, linkcolor = black, citecolor = black, final]{hyperref}
+\usepackage[left = 1.5cm, right = 1.5cm, top = 1.6cm, bottom = 1.6cm]{geometry}
+\linespread{1.08}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+
+\usepackage{amsthm, amsmath, amssymb}
+\usepackage{graphicx, multicol}
+\usepackage{marvosym, wasysym}
+
+% Acá están las líneas que cambian el estilo del texto y las ecuaciones:
+%----------------------------------------------
+\usepackage[noamssymbols]{newpxmath}
+\usepackage{newpxtext}
+%----------------------------------------------
+
+% Cosas necesarias para que funcione Tikz:
+%----------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{arrows,intersections}
+\usetikzlibrary{angles,quotes}
+\usetikzlibrary{arrows.meta}
+%----------------------------------------------
+
+\newcommand{\ds}{\displaystyle}
+\DeclareMathOperator{\sech}{sech}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+{\scshape FISI - 4405} \hfill {\scshape \Large Mecánica Analítica} \hfill {Proyecto \#1 - Thomas A. Hernández\scshape }
+ 
+\smallskip
+
+\hrule
+
+\medskip
+
+\begin{center}
+
+{\scshape \Large Sistema de dos ruedas bajo un potencial externo}
+
+\end{center}
+
+\medskip
+
+Este proyecto se enfoca en el estudio del sistema de la {\scshape Figure~\ref{fig:sistema}}, formado por dos ruedas idénticas de radio $a$ y masa $m$, unidas rígidamente por un eje de longitud $2b$ y masa $M$ que las mantiene paralelas sin inclinarse de la vertical. El conjunto se mueve sobre un plano horizontal fijo, con las ruedas rodando sin deslizar sobre el plano. El sistema está sujeto a un potencial externo arbitrario $V(x,y)$ que actúa únicamente sobre el centro de masa, el cual se encuentra localizado en el punto medio del eje.
+
+\begin{figure}[h]
+    \centering
+    \input{tikz/physic_system.tex}
+    \caption{Sistema a estudiar. Un conjunto de coordenadas generalizadas para el sistema es el indicado en la figura, donde $x$, $y$ son las coordenadas del centro de masa, $\theta$ el ángulo que define la orientación del eje en el plano $(x, y)$, y $\phi_{1}$, $\phi_{2}$ los ángulos de rotación de cada una de las ruedas.}~\label{fig:sistema}
+\end{figure}
+
+\smallskip
+
+\hrule
+
+\smallskip
+
+Para el sistema propuesto existen un total de dos restricciones de movimiento esenciales. Las ecuaciones que surgen de estas restricciones están descritas en los siguientes puntos:
+
+\begin{enumerate}
+    \item El rodamiento sin deslizamiento que sucede en ambas ruedas da origen a dos ecuaciones:
+    \begin{equation}
+        \dot{\vec{r}}_{1} = a\dot\phi_{1}\hat{n} \qquad \text{y} \qquad \dot{\vec{r}}_{2} = a\dot\phi_{2}\hat{n}, ~\nonumber ~\label{condicion-1}
+    \end{equation}
+    donde $\vec{r}_{i}$ representa el vector de posición del punto de contacto de cada rueda con el plano $xy$, mientras que $\hat{n} = (\cos\theta, \sin\theta)$ es el vector de la dirección de desplazamiento del sistema. 
+
+    \item Las ruedas no tienen permitido moverse en la dirección paralela a la barra que las une $\hat{\theta} = (-\sin\theta, \cos\theta)$, es decir:
+    \begin{equation}
+        \dot{\vec{r}}_{1} \cdot \hat{\theta} = 0 \qquad \text{y} \qquad \dot{\vec{r}}_{2} \cdot \hat{\theta} = 0. ~\nonumber ~\label{condicion-2}
+    \end{equation}
+\end{enumerate}
+
+Estas restricciones dependen de los vectores que determinan los puntos de contacto de cada una de las ruedas del sistema, no del vector del centro de masa. Para escribir estos vectores en términos del vector de centro de masa $\vec{R}$ hay que tener en cuenta el vector director $\hat{\theta}$ paralelo a la barra. De esta forma:
+\begin{equation}
+    \vec{r}_{1} = \vec{R} + b\hat{\theta} \qquad \text{y} \qquad \vec{r}_{2} = \vec{R} - b\hat{\theta}. ~\nonumber
+\end{equation}
+Con estos vectores en mente, las restricciones pueden reescribirse en la siguiente forma:
+\begin{equation}
+    \dot{\vec{r}}_{1}  = \dot{\vec{R}} + b\dot{\hat{\theta}} = \dot{\vec{R}} - b\dot{\theta}\hat{n} = a\dot\phi_{1}\hat{n} \quad \longrightarrow \quad \boxed{(\dot{\vec{R}}\cdot\hat{n}) - b\dot{\theta} = a\dot\phi_{1}}~\label{pre-ligadura1}
+\end{equation}
+\begin{equation}
+    \dot{\vec{r}}_{2}  = \dot{\vec{R}} - b\dot{\hat{\theta}} = \dot{\vec{R}} + b\dot{\theta}\hat{n} = a\dot\phi_{2}\hat{n} \quad \longrightarrow \quad \boxed{(\dot{\vec{R}}\cdot\hat{n}) + b\dot{\theta} = a\dot\phi_{2}}~\label{pre-ligadura2}
+\end{equation}
+\begin{equation}
+    \dot{\vec{r}}_{\text{pc}|1}\cdot\hat{\theta}  = (\dot{\vec{R}} - b\dot{\hat{\theta}})\cdot\hat{\theta} = 0 \quad \longrightarrow \quad \boxed{(\dot{\vec{R}}\cdot\hat{\theta}) = 0}  
+\end{equation}
+
+Para analizar la dinámica del sistema de una forma más cómoda, se propone escribir todo en términos de las coordenadas generalizadas $\mathbf{q} = (x, y, \theta, \Phi, \psi)$, donde las nuevas variables angulares se escriben como:
+\begin{equation}
+        \Phi = \frac{1}{2}(\phi_{1} + \phi_2) \qquad y \qquad \psi = \phi_{1} - \phi_{2}, ~\nonumber
+\end{equation}
+correspondientes a la fase media y la diferencia de fase entre las ruedas $1$ y $2$ respectivamente. Las ligaduras pueden ser reescritas en estas nuevas variables sumando y restando las ecuaciones~\eqref{pre-ligadura1} y~\eqref{pre-ligadura2}, lo cual genera las expresiones:
+\begin{equation}
+    2(\vec{R}\cdot\hat{n}) = a(\dot\phi_{1} + \dot\phi_{2}) \qquad \longrightarrow \qquad \boxed{(\vec{R}\cdot\hat{n}) = a\dot\Phi} ~\nonumber
+\end{equation}
+\begin{equation}
+   -2b\dot\theta = a(\dot\phi_{1} - \dot\phi_{2}) \qquad \longrightarrow \qquad \boxed{\dot\theta = -\frac{a}{2b}\dot\psi} ~\nonumber
+\end{equation}
+
+Recopilando los resultados anteriores, las ecuaciones de las ligaduras $f_{i}$ para este sistema son las siguientes:
+\[
+\left\{
+\begin{aligned}
+    f_{1} &= \dot{x}\cos\theta + \dot{y}\sin\theta - a\dot{\Phi} \\
+    f_{2} &= -\dot{x}\sin\theta + \dot{y}\cos\theta \\
+    f_{3} &= \dot{\theta} + \frac{a}{2b}\dot{\psi}
+\end{aligned}
+\right.
+\]
+donde $f_{1}$ y $f_{2}$ son ligaduras no holonómicas, dado que restringen el movimiento del sistema a una región particular del espacio de configuración, contrario a $f_3$, que es una ligadura holonómica al permitir reescribir $\psi$ en términos de $\theta$, reduciendo así los grados de libertad redundantes.
+
+\medskip
+
+Por otra parte, para estudiar la dinámica del sistema y ver cómo se comportan los grados de libertad, el siguiente Lagrangiano provee la información base necesaria:
+\begin{equation}
+    L(\mathbf{q}, \dot{\mathbf{q}}, t) = \frac{1}{2}(M + 2m)(\dot{x}^{2} + \dot{y}^{2}) + \frac{1}{2}I_{M}\dot{\theta}^{2} + \frac{1}{2}I_{m}\dot{\phi}^{2}_{1} + \frac{1}{2}I_{m}\dot{\phi}^{2}_{2} - V(x, y). ~\nonumber
+\end{equation}
+Para reescribir en términos de $\dot\Phi$ es necesario escribir la suma de cuadrados entre $\dot\phi_{1}$ y $\dot\phi_{2}$ en términos de $\dot\Phi$ y $\dot\psi$, para luego eliminar $\dot\psi$ usando $f_{3}$, de modo que:
+\begin{equation}
+    \dot\phi_{1}^{2} + \dot\phi_{2}^{2} = \frac{1}{2}\left[(2\dot\Phi)^{2} + \dot\psi^{2}\right] = \frac{1}{2}\left[(2\dot\Phi)^{2} + \left(\frac{2b}{1}\right)^{2}\dot\theta^{2}\right].~\nonumber
+\end{equation}
+Reescribiendo el Lagrangiano\footnote{Para el paso a paso explícito de todos los procesos, revisar el archivo PDF anexado como material suplementario en el repositorio de GitHub.}, su expresión resulta en:
+\begin{equation}
+    L(\mathbf{q}, \dot{\mathbf{q}}, t) = \frac{1}{2}(M + 2m)(\dot{x}^{2} + \dot{y}^{2}) + \frac{1}{2}I_{T}\dot{\theta}^{2} + I_{m}\dot{\Phi}^{2} - V(x, y),
+\end{equation}
+\medskip
+
+donde $\tilde{M} = M + 2m$ y $I_T = I_{M} + (2b/a)^{2}I_m$. Estableciendo el sistema de ecuaciones con las ecuaciones de Euler-Lagrange y la contribución de las ligaduras se llega a:
+\medskip
+\begin{align*}
+    \tilde{M}\ddot{x} & = \partial_{x}V + \lambda_{1}\cos\theta - \lambda_{2}\sin\theta \\
+    \tilde{M}\ddot{y} & = \partial_{y}V + \lambda_{1}\sin\theta + \lambda_{2}\cos\theta \\
+    I_{T}\ddot\theta & = 0 \quad \longrightarrow \quad \boxed{\theta(t) = \dot\theta_{0}t + \theta_{0}} \\
+    I_{m}\ddot\Phi & = -a\lambda_{1}
+\end{align*}
+\medskip
+
+La única solución inmediata es que el ángulo de dirección $\theta(t)$ varía linealmente con el tiempo. Para solucionar para el resto de coordenadas decidí tomar un acercamiento en el que primero busco los valores de los multiplicadores de Lagrange $\lambda_{1}$ y $\lambda_{2}$ y luego se puede solucionar para $x$, $y$ y $\Phi$. Nuevamente, el despeje completo está descrito en el material suplementario. Así, las expresiones para los multiplicadores son:
+\medskip
+\begin{equation}
+    \lambda_{1} = -\left(1 + \frac{a^{2}\tilde{M}}{I_{m}}\right)^{-1}(\partial_{x}V\cdot\cos\theta + \partial_{y}V\cdot\sin\theta)
+\end{equation}
+\begin{equation}
+    \lambda_{2} = (\partial_{x}V\cdot\sin\theta - \partial_{y}V\cdot\cos\theta) + a\tilde{M}\dot\theta_{0}\dot\Phi.
+\end{equation}
+
+El valor de la fuerza de restricción, que en este caso es la fuerza de rozamiento que permite que el sistema ruede sin deslizar, tiene la forma:
+\begin{equation}
+    \vec{F}_{R} = (\lambda_{1}\cos\theta - \lambda_{2}\sin\theta, \lambda_{1}\sin\theta + \lambda_{2}\cos\theta)~\nonumber
+\end{equation}
+
+La norma corresponde con la expresión:
+\begin{equation}
+    \left|\left|\vec{F}_{R}\right|\right| = \sqrt{\lambda_{1}^{2} + \lambda_{2}^{2}} ~\nonumber
+\end{equation}
+
+\bigskip
+
+\hrule
+
+\bigskip
+
+\begin{center}
+
+    {\scshape \large ¿Cómo se comporta el sistema para diferentes potenciales?}
+    
+\end{center}
+
+\bigskip
+
+\textbf{1.} Asumiendo que $V(x,y) = 0$, los multiplicadores de Lagrange toman los valores de:
+\begin{equation}
+    \lambda_{1} = 0 \qquad \text{y} \qquad \lambda_{2} = a\tilde{M}\dot\theta_{0}\dot\Phi_{0}. ~\nonumber
+\end{equation}
+Como $\lambda_{1} = 0$, $I_{m}\ddot\Phi = 0$, dando como solución $\Phi(t) = \dot\Phi_{0}t$, tomando, sin pérdida de generalidad, que $\Phi_{0} = 0$. Ahora, las ecuaciones dinámicas para $x(t)$ y $y(t)$ se reducen a:
+\begin{equation}
+    \tilde{M}\ddot{x} = -a\tilde{M}\dot\theta_{0}\dot\Phi_{0}\sin\theta(t) \qquad \longrightarrow \qquad \ddot{x} = -a\dot\theta_{0}\dot\Phi_{0}\sin\theta(t) ~\nonumber
+\end{equation}
+\begin{equation}
+    \tilde{M}\ddot{y} = a\tilde{M}\dot\theta_{0}\dot\Phi_{0}\cos\theta(t) \qquad \longrightarrow \qquad \ddot{y} = a\dot\theta_{0}\dot\Phi_{0}\cos\theta(t) ~\nonumber
+\end{equation}
+Integrando estas expresiones y notando que las constantes $\dot{x}_{0}$ y $\dot{y}_{0}$ deben ser cero para que la restricción $f_{2}$ se cumpla en todo caso, terminamos con el sistema de ecuaciones dinámicas:
+\begin{align*}
+    \theta(t) & = \dot\theta_{0}t + \theta_{0} \\
+    \Phi(t) & = \dot\Phi_{0}t \\
+    x(t) & = a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\sin\theta(t) + x_{0} \\
+    y(t) & = -a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\cos\theta(t) + y_{0}
+\end{align*}
+Notar que la trayectoria que sigue el sistema es circular, dado que:
+\begin{equation}
+    (x(t) - x_{0})^{2} + (y(t) - y_{0})^{2} = \left(a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\sin\theta(t) + x_{0}\right)^{2} + \left(-a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\cos\theta(t) + y_{0}\right)^{2} = \left(a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\right)^{2} ~\nonumber
+\end{equation}
+
+\textbf{2.} Asumiendo que $V(x, y) = -F_{0}y$, los multiplicadores de Lagrange toman los valores de:
+\begin{equation}
+    \lambda_{1} = -\gamma{F_{0}}\sin\theta(t) \qquad \text{y} \qquad \lambda_{2} = -F_{0}\cos\theta(t) + a\tilde{M}\dot\theta_{0}\dot\Phi. ~\nonumber
+\end{equation}
+La expresión dinámica para $\Phi$ resulta en:
+\begin{equation}
+    I_{m}\ddot\Phi = a\gamma{F_{0}}\sin\theta(t) \qquad \longrightarrow \qquad \dot\Phi(t) = \frac{a\gamma{F_{0}}}{I_{m}\dot\theta_{0}}\cos\theta(t) + \dot\Phi_{0}    ~\nonumber
+\end{equation}
+
+\end{document}

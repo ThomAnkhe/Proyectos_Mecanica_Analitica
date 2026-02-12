@@ -1,0 +1,57 @@
+\begin{tikzpicture}[scale = 1.35, >=stealth', dot/.style = {draw, fill = white, circle, inner sep = 0pt, minimum size = 4pt}]
+    % Coordenadas del punto de contacto del vector de posición del centro de masa.
+    \pgfmathsetmacro{\xO}{4}
+    \pgfmathsetmacro{\yO}{3}
+    \pgfmathsetmacro{\angR}{atan2(\yO,\xO}
+    \pgfmathsetmacro{\ang}{80}
+    % Longitudes de la barra y las ruedas.
+    \pgfmathsetmacro{\barO}{3}
+    \pgfmathsetmacro{\wheelsO}{1.0}
+
+    % Cambio el estilo del punto por preferencia personal la verdad.
+    \tikzset{dot/.style = {circle, draw, fill=white, inner sep=0.5pt, minimum size=0.5pt}}
+
+    % Primero se crea el eje cartesiano:
+    \coordinate (O) at (0, 0);
+    \draw[->] (-0.1, 0) -- (6, 0);
+    \draw[->] (0, -0.1) -- (0, 4);
+    
+    % Incluyo el vector de posición de este vector y le calculo su ángulo.
+    \draw[->] (0, 0) -- (\xO, \yO) coordinate (R);
+
+    \draw[dashed, black!40] (R) -- (\xO,0);
+    \node[dot] (x) at (\xO, 0) {};
+    \node[below = 0.5pt, font = \footnotesize] at (x) {$x$};
+    
+    \draw[dashed, black!40] (R) -- (0,\yO);
+    \node[dot] (y) at (0, \yO) {};
+    \node[left = 0.5pt, font = \footnotesize] at (y) {$y$};
+
+    \begin{scope}[shift={(R)}, rotate =\angR - \ang]
+        % Barra rígida:
+        \draw[fill=gray!20] (-\barO/2, -0.05) rectangle (\barO/2, 0.05);
+        \draw[|-|] (-\barO/2 + 0.025, 0.15) -- (0, 0.15) node[midway, xshift = 1mm, yshift = 1mm, font = \footnotesize] {$b$};
+        % Ruedas del sistema:
+        \draw[fill=gray!40] (-\barO/2, -\wheelsO/2) rectangle (-\barO/2 - 0.1, \wheelsO/2);
+        \draw[|-|] (-\barO/2 - 0.2, -\wheelsO/2) -- (-\barO/2 - 0.2, 0) node[midway, xshift = -1mm, yshift = 1mm, font = \footnotesize] {$a$};
+        
+        \draw[fill=gray!40] (\barO/2, \wheelsO/2) rectangle (\barO/2 + 0.1, -\wheelsO/2);
+
+        % Esquemática del eje:
+        \draw[dashed, black!40] (\barO/2 + 0.1, -1.0) -- (\barO/2 + 0.1, 1.0);
+        \coordinate (Pang) at (\barO/2 + 0.1, -\wheelsO/2);
+        \draw[->] (Pang) -- ++ (0, \wheelsO + 0.5) coordinate (n) node[left, xshift=-1mm, font = \footnotesize] {$\hat{n}$};
+    \end{scope}
+
+    \draw[->] (0,0) -- (\xO, \yO) coordinate (R) node[midway, xshift = 1.5mm, yshift = -1.5mm, font = \scriptsize] {$\vec{R}$};
+
+    \draw[->] (0,0) -- ({\xO - (\barO/2 + 0.15)*sin(-\angR + \ang)}, {\yO + (\barO/2)*cos(-\angR + \ang)}) node[midway, xshift = 1.5mm, yshift = -1.5mm, font = \scriptsize] {$\vec{r}_{1}$};
+
+    \draw[->] (0,0) -- ({\xO + (\barO/2 + 0.25)*sin(-\angR + \ang)}, {\yO - (\barO/2 - 0.10)*cos(-\angR + \ang)}) node[midway, xshift = 1.5mm, yshift = -1.5mm, font = \scriptsize] {$\vec{r}_{2}$};
+    
+    \draw[dashed, black!40] (Pang) -- ++(1.25,0) coordinate (H);
+    \draw[dashed, black!40] (Pang) -- ++(-0.75,0);
+    
+    \pic[draw, "$\scriptstyle \theta$", angle radius=3mm, angle eccentricity = 1.5] {angle = H--Pang--n};
+
+\end{tikzpicture}
