@@ -10,6 +10,7 @@
 \usepackage{amsthm, amsmath, amssymb}
 \usepackage{graphicx, multicol}
 \usepackage{marvosym, wasysym}
+\usepackage{hyperref}
 
 % Acá están las líneas que cambian el estilo del texto y las ecuaciones:
 %----------------------------------------------
@@ -128,12 +129,10 @@ Para reescribir en términos de $\dot\Phi$ es necesario escribir la suma de cuad
 \begin{equation}
     \dot\phi_{1}^{2} + \dot\phi_{2}^{2} = \frac{1}{2}\left[(2\dot\Phi)^{2} + \dot\psi^{2}\right] = \frac{1}{2}\left[(2\dot\Phi)^{2} + \left(\frac{2b}{1}\right)^{2}\dot\theta^{2}\right].~\nonumber
 \end{equation}
-Reescribiendo el Lagrangiano\footnote{Para el paso a paso explícito de todos los procesos, revisar el archivo PDF anexado como material suplementario en el repositorio de GitHub.}, su expresión resulta en:
+Reescribiendo el Lagrangiano\footnote{Para el paso a paso explícito de todos los procesos, revisar el archivo PDF anexado como material suplementario en el repositorio de \href{https://github.com/ThomAnkhe/Proyectos_Mecanica_Analitica/}{GitHub}.}, su expresión resulta en:
 \begin{equation}
     L(\mathbf{q}, \dot{\mathbf{q}}, t) = \frac{1}{2}(M + 2m)(\dot{x}^{2} + \dot{y}^{2}) + \frac{1}{2}I_{T}\dot{\theta}^{2} + I_{m}\dot{\Phi}^{2} - V(x, y),
 \end{equation}
-\medskip
-
 donde $\tilde{M} = M + 2m$ y $I_T = I_{M} + (2b/a)^{2}I_m$. Estableciendo el sistema de ecuaciones con las ecuaciones de Euler-Lagrange y la contribución de las ligaduras se llega a:
 \medskip
 \begin{align*}

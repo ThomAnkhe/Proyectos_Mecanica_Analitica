@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1770904187.9875 "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto #1/main.tex" "main.pdf" "main" 1770904189.23856 0
-  "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770902063 157504 5f21e678cb1906e8493b2b291deb17ef ""
+["pdflatex"] 1770905067.42082 "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto #1/main.tex" "main.pdf" "main" 1770905068.6415 0
+  "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770904517 159155 3547ee33dc7379664ea0cbc2fad66270 ""
   "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1770897933 13335798 d57db6c08f8c4d8f7f440b8875568bf0 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newpx/px-lms.enc" 1762693727 3877 2ca811886181a05a861d20a35de75e06 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc" 1736607166 3136 bbe665bd0bb471a2da1e8fd326cff9fa ""
@@ -210,10 +210,10 @@
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto #1/main.tex" 1770904186 11846 d4bb99fca9a82b88c99f75d546a1facd ""
-  "main.aux" 1770904189 1281 ec0bf6b2b3708992a23f8ca971273bbd "pdflatex"
-  "main.out" 1770904188 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1770904186 11846 d4bb99fca9a82b88c99f75d546a1facd ""
+  "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto #1/main.tex" 1770905065 11925 b3aab2e3f3f3e6ce0924d322f8181fd0 ""
+  "main.aux" 1770905068 1281 42ae5f21745f0b14c3ad2c3b87d88d86 "pdflatex"
+  "main.out" 1770905068 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1770905065 11925 b3aab2e3f3f3e6ce0924d322f8181fd0 ""
   "tikz/physic_system.tex" 1770901731 2898 0ecd2dd797f52b1f10d473a42353dbe5 ""
   (generated)
   "main.aux"
