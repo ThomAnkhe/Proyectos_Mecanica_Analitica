@@ -1,6 +1,6 @@
-PWD c:\Users\ThomAnkhe\Documents\Repositories\Proyectos_Mecanica_Analitica\Proyecto #1
+PWD c:\Users\ThomAnkhe\Documents\Repositories\Proyectos_Mecanica_Analitica\Proyecto_1\Informe
 INPUT C:\Users\ThomAnkhe\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\ThomAnkhe\Documents\Repositories\Proyectos_Mecanica_Analitica\Proyecto #1\main.tex
+INPUT c:\Users\ThomAnkhe\Documents\Repositories\Proyectos_Mecanica_Analitica\Proyecto_1\Informe\main.tex
 OUTPUT main.log
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsart.cls
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsart.cls
@@ -104,6 +104,12 @@ INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\marvosym\marvos
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\marvosym\marvosym.sty
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\wasysym\wasysym.sty
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\wasysym\wasysym.sty
+INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
+INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
+INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
+INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\newpx\newpxmath.sty
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\newpx\newpxmath.sty
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\generic\binhex\binhex.tex
@@ -356,6 +362,7 @@ INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstop
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newpx\zpl-Regular-tlf-sc-t1.tfm
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newpx\zpl-Regular-tlf-sc-t1.tfm
+INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newpx\zpl-Bold-tlf-sc-t1.tfm
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newpx\zplmi.tfm
@@ -426,6 +433,7 @@ INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntx
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txexs.tfm
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txex-bar.tfm
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newpx\zpl-Regular-tlf-sc-t1.tfm
+INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newpx\zpl-Bold-tlf-sc-t1.tfm
 INPUT C:\Users\ThomAnkhe\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newpx\zpl-Bold-tlf-t1.tfm
 INPUT main.aux
 INPUT .\main.out

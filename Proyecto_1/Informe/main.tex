@@ -10,7 +10,11 @@
 \usepackage{amsthm, amsmath, amssymb}
 \usepackage{graphicx, multicol}
 \usepackage{marvosym, wasysym}
+\usepackage{mathtools}
 \usepackage{hyperref}
+
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
 
 % Acá están las líneas que cambian el estilo del texto y las ecuaciones:
 %----------------------------------------------
@@ -45,7 +49,7 @@
 
 \begin{center}
 
-{\scshape \Large Sistema de dos ruedas bajo un potencial externo}
+{\scshape \Large \textbf{Sistema de dos ruedas bajo un potencial externo}}
 
 \end{center}
 
@@ -111,8 +115,8 @@ Recopilando los resultados anteriores, las ecuaciones de las ligaduras $f_{i}$ p
 \[
 \left\{
 \begin{aligned}
-    f_{1} &= \dot{x}\cos\theta + \dot{y}\sin\theta - a\dot{\Phi} \\
-    f_{2} &= -\dot{x}\sin\theta + \dot{y}\cos\theta \\
+    f_{1} &= -\dot{x}\sin\theta + \dot{y}\cos\theta \\
+    f_{2} &= \dot{x}\cos\theta + \dot{y}\sin\theta - a\dot{\Phi} \\
     f_{3} &= \dot{\theta} + \frac{a}{2b}\dot{\psi}
 \end{aligned}
 \right.
@@ -129,83 +133,154 @@ Para reescribir en términos de $\dot\Phi$ es necesario escribir la suma de cuad
 \begin{equation}
     \dot\phi_{1}^{2} + \dot\phi_{2}^{2} = \frac{1}{2}\left[(2\dot\Phi)^{2} + \dot\psi^{2}\right] = \frac{1}{2}\left[(2\dot\Phi)^{2} + \left(\frac{2b}{1}\right)^{2}\dot\theta^{2}\right].~\nonumber
 \end{equation}
-Reescribiendo el Lagrangiano\footnote{Para el paso a paso explícito de todos los procesos, revisar el archivo PDF anexado como material suplementario en el repositorio de \href{https://github.com/ThomAnkhe/Proyectos_Mecanica_Analitica/}{GitHub}.}, su expresión resulta en:
+Reescribiendo el Lagrangiano\footnote{Para el paso a paso explícito de todos los procesos, revisar el archivo PDF anexado como material suplementario en el repositorio de \href{https://github.com/ThomAnkhe/Proyectos_Mecanica_Analitica/tree/main/Proyecto_1}{GitHub}.}, su expresión resulta en:
 \begin{equation}
-    L(\mathbf{q}, \dot{\mathbf{q}}, t) = \frac{1}{2}(M + 2m)(\dot{x}^{2} + \dot{y}^{2}) + \frac{1}{2}I_{T}\dot{\theta}^{2} + I_{m}\dot{\Phi}^{2} - V(x, y),
+    L(\mathbf{q}, \dot{\mathbf{q}}, t) = \frac{1}{2}M_{T}(\dot{x}^{2} + \dot{y}^{2}) + \frac{1}{2}I_{T}\dot{\theta}^{2} + I_{m}\dot{\Phi}^{2} - V(x, y),
 \end{equation}
-donde $\tilde{M} = M + 2m$ y $I_T = I_{M} + (2b/a)^{2}I_m$. Estableciendo el sistema de ecuaciones con las ecuaciones de Euler-Lagrange y la contribución de las ligaduras se llega a:
+donde $M_{T} = M + 2m$ y $I_T = I_{M} + 2(b/a)^{2}I_m$. Resolviendo la cinemática con las ecuaciones de Euler Lagrange e introduciendo las ligaduras se llega al siguiente sistema de ecuaciones diferenciales de segundo orden:
+\[
+\left\{
+\begin{aligned}
+    M_{T}\ddot{x} & + \partial_{x}V = -\lambda_{1}\sin\theta + \lambda_{2}\cos\theta \\
+    M_{T}\ddot{y} & + \partial_{y}V = \lambda_{1}\cos\theta + \lambda_{2}\sin\theta \\
+    I_{T}\ddot\theta & = 0 \\
+    I_{m}\ddot\Phi & = -a\lambda_{2}
+\end{aligned}
+\right.,
+\]
+donde la fuerza de ligadura se puede construir de la forma:
+\begin{equation}
+    \vec{F}_{R} = (\lambda_{1}\cos\theta - \lambda_{2}\sin\theta)\hat{x} + (\lambda_{1}\sin\theta + \lambda_{2}\cos\theta)\hat{y} \quad \longrightarrow \quad \norm{\vec{F}_{R}} = \sqrt{\lambda_{1}^{2} + \lambda_{2}^{2}}.~\nonumber
+\end{equation}
+
+La única solución que persiste, independientemente del potencial suministrado, es que el ángulo de dirección $\theta(t)$ varía linealmente con el tiempo. Para solucionar para el resto de coordenadas es necesario combinar las ligaduras $f_{1}$ y $f_{2}$ junto con las ecuaciones dinámicas para poder llegar a expresiones útiles. Dos ecuaciones importantes surgen de derivar con respecto al tiempo la ligadura $f_{i}$ para luego usar la ligadura $f_{j}$, dando lugar a las expresiones:
+\begin{equation}
+    \dot{f}_{1} = -\ddot{x}\sin\theta + \ddot{y}\cos\theta - (\dot{x}\cos\theta + \dot{y}\sin\theta)\dot\theta = 0 \quad \longrightarrow \quad \boxed{a\dot\Phi\dot\theta = -\ddot{x}\sin\theta + \ddot{y}\cos\theta}~\label{delta-f1}
+\end{equation}
+\begin{equation}
+    \dot{f}_{2} = \ddot{x}\cos\theta + \ddot{y}\sin\theta + (-\dot{x}\sin\theta + \dot{y}\cos\theta)\dot\theta  - \ddot\Phi = 0 \quad \longrightarrow \quad \boxed{a\ddot\Phi = \ddot{x}\cos\theta + \ddot{y}\sin\theta}~\label{delta-f2}
+\end{equation}
+
+Usando los resultados de las ecuaciones~\eqref{delta-f1} y~\eqref{delta-f2}, junto con las ecuaciones diferenciales para $x$, $y$ y $\Phi$ se puede encontrar una solución para el multiplicador de Lagrange $\lambda_{2}$, siendo este el único necesario para desglozar la dinámica del sistema:
+\begin{equation}
+    \lambda_{2} = \left(1 + \frac{a^{2}M_{T}}{I_{m}}\right)^{-1}\left(\frac{\partial{V(x, y)}}{\partial{x}}\cos\theta + \frac{\partial{V(x, y)}}{\partial{y}}\sin\theta\right)~\label{lambda}
+\end{equation}
+
+La anterior afirmación está respaldada en el hecho de que, al operar (~\eqref{delta-f1}$\cdot \cos\theta -$~\eqref{delta-f2}$\cdot\sin\theta$) y (~\eqref{delta-f1}$\cdot \sin\theta +$~\eqref{delta-f2}$\cdot\cos\theta$) se llega la ecuación de rodamiento sin deslizamiento para el centro de masa:
+\[\left.
+\begin{aligned}
+    \ddot{x} & = a(\ddot\Phi\cos\theta - \dot\Phi\sin\theta) \\
+    \ddot{y} & = a(\ddot\Phi\sin\theta + \dot\Phi\cos\theta)
+\end{aligned}
+\right\} \quad \longrightarrow \quad \ddot{\vec{R}} = a\frac{\text{d}(\dot\Phi\cdot\hat{n})}{\text{d}t} \quad \longrightarrow \quad \boxed{\dot{\vec{R}} = a\dot\Phi\cdot\hat{n}}\]
+
+Nótese que ahora la solución del sistema se resume en hallar $\Phi(t)$ usando la expresión para el multiplicador de Lagrange $\lambda_{2}$ y la ecuación diferencial $\ddot\Phi = -(a/I_{m})\lambda_{2}$. Luego de esto, se emplea la condición de rodamiento sin deslizamiento para el centro de masa resolviendo así para $x(t)$ y $y(t)$.
 \medskip
-\begin{align*}
-    \tilde{M}\ddot{x} & = \partial_{x}V + \lambda_{1}\cos\theta - \lambda_{2}\sin\theta \\
-    \tilde{M}\ddot{y} & = \partial_{y}V + \lambda_{1}\sin\theta + \lambda_{2}\cos\theta \\
-    I_{T}\ddot\theta & = 0 \quad \longrightarrow \quad \boxed{\theta(t) = \dot\theta_{0}t + \theta_{0}} \\
-    I_{m}\ddot\Phi & = -a\lambda_{1}
-\end{align*}
-\medskip
-
-La única solución inmediata es que el ángulo de dirección $\theta(t)$ varía linealmente con el tiempo. Para solucionar para el resto de coordenadas decidí tomar un acercamiento en el que primero busco los valores de los multiplicadores de Lagrange $\lambda_{1}$ y $\lambda_{2}$ y luego se puede solucionar para $x$, $y$ y $\Phi$. Nuevamente, el despeje completo está descrito en el material suplementario. Así, las expresiones para los multiplicadores son:
-\medskip
-\begin{equation}
-    \lambda_{1} = -\left(1 + \frac{a^{2}\tilde{M}}{I_{m}}\right)^{-1}(\partial_{x}V\cdot\cos\theta + \partial_{y}V\cdot\sin\theta)
-\end{equation}
-\begin{equation}
-    \lambda_{2} = (\partial_{x}V\cdot\sin\theta - \partial_{y}V\cdot\cos\theta) + a\tilde{M}\dot\theta_{0}\dot\Phi.
-\end{equation}
-
-El valor de la fuerza de restricción, que en este caso es la fuerza de rozamiento que permite que el sistema ruede sin deslizar, tiene la forma:
-\begin{equation}
-    \vec{F}_{R} = (\lambda_{1}\cos\theta - \lambda_{2}\sin\theta, \lambda_{1}\sin\theta + \lambda_{2}\cos\theta)~\nonumber
-\end{equation}
-
-La norma corresponde con la expresión:
-\begin{equation}
-    \left|\left|\vec{F}_{R}\right|\right| = \sqrt{\lambda_{1}^{2} + \lambda_{2}^{2}} ~\nonumber
-\end{equation}
-
-\bigskip
-
 \hrule
-
-\bigskip
-
+\medskip
 \begin{center}
-
-    {\scshape \large ¿Cómo se comporta el sistema para diferentes potenciales?}
-    
+    {\scshape \large \textbf{¿Cómo se comporta el sistema para diferentes potenciales?}}
 \end{center}
 
-\bigskip
-
-\textbf{1.} Asumiendo que $V(x,y) = 0$, los multiplicadores de Lagrange toman los valores de:
+Antes de empezar a explorar potenciales, es importante tener presente que para todos los escenarios, el ángulo de la dirección de desplazamiento del sistema varía linealmente como:
 \begin{equation}
-    \lambda_{1} = 0 \qquad \text{y} \qquad \lambda_{2} = a\tilde{M}\dot\theta_{0}\dot\Phi_{0}. ~\nonumber
-\end{equation}
-Como $\lambda_{1} = 0$, $I_{m}\ddot\Phi = 0$, dando como solución $\Phi(t) = \dot\Phi_{0}t$, tomando, sin pérdida de generalidad, que $\Phi_{0} = 0$. Ahora, las ecuaciones dinámicas para $x(t)$ y $y(t)$ se reducen a:
-\begin{equation}
-    \tilde{M}\ddot{x} = -a\tilde{M}\dot\theta_{0}\dot\Phi_{0}\sin\theta(t) \qquad \longrightarrow \qquad \ddot{x} = -a\dot\theta_{0}\dot\Phi_{0}\sin\theta(t) ~\nonumber
-\end{equation}
-\begin{equation}
-    \tilde{M}\ddot{y} = a\tilde{M}\dot\theta_{0}\dot\Phi_{0}\cos\theta(t) \qquad \longrightarrow \qquad \ddot{y} = a\dot\theta_{0}\dot\Phi_{0}\cos\theta(t) ~\nonumber
-\end{equation}
-Integrando estas expresiones y notando que las constantes $\dot{x}_{0}$ y $\dot{y}_{0}$ deben ser cero para que la restricción $f_{2}$ se cumpla en todo caso, terminamos con el sistema de ecuaciones dinámicas:
-\begin{align*}
-    \theta(t) & = \dot\theta_{0}t + \theta_{0} \\
-    \Phi(t) & = \dot\Phi_{0}t \\
-    x(t) & = a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\sin\theta(t) + x_{0} \\
-    y(t) & = -a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\cos\theta(t) + y_{0}
-\end{align*}
-Notar que la trayectoria que sigue el sistema es circular, dado que:
-\begin{equation}
-    (x(t) - x_{0})^{2} + (y(t) - y_{0})^{2} = \left(a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\sin\theta(t) + x_{0}\right)^{2} + \left(-a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\cos\theta(t) + y_{0}\right)^{2} = \left(a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\right)^{2} ~\nonumber
+    \theta(t) = \dot\theta_{0}t + \theta_{0}~\nonumber
 \end{equation}
 
-\textbf{2.} Asumiendo que $V(x, y) = -F_{0}y$, los multiplicadores de Lagrange toman los valores de:
+\textbf{1. Potencial Nulo:} Asumiendo que $V(x,y) = 0$, el multiplicador de Lagrange $\lambda_{2}$ se anula, dado que ambas derivadas parciales del potencial son nulas. Por este motivo, la solución de la fase media será:
 \begin{equation}
-    \lambda_{1} = -\gamma{F_{0}}\sin\theta(t) \qquad \text{y} \qquad \lambda_{2} = -F_{0}\cos\theta(t) + a\tilde{M}\dot\theta_{0}\dot\Phi. ~\nonumber
+    \Phi(t) = \dot\Phi_{0}t + \Phi_{0} ~\nonumber
 \end{equation}
-La expresión dinámica para $\Phi$ resulta en:
+Se asumirá en este y todos los demás casos que $\Phi_{0} = 0$. Con esto presente, las soluciones para la posición se vuelven:
+\[
+\begin{pmatrix}
+    \dot{x} \\
+    \dot{y}
+\end{pmatrix} 
+= a\dot\Phi_{0}
+\begin{pmatrix}
+    \cos(\dot\theta_{0}t + \theta_{0}) \\
+    \sin(\dot\theta_{0}t + \theta_{0})
+\end{pmatrix}
+\quad \longrightarrow \quad
+\begin{pmatrix}
+    x(t) \\
+    y(t)
+\end{pmatrix} 
+= a\frac{\dot\Phi_{0}}{\dot\phi_{0}}
+\begin{pmatrix}
+    \sin(\dot\theta_{0}t + \theta_{0}) \\
+    -\cos(\dot\theta_{0}t + \theta_{0})
+\end{pmatrix} + a\frac{\dot\Phi_{0}}{\dot\theta_{0}}
+\begin{pmatrix}
+    -\sin(\theta_{0}) \\
+    \cos(\theta_{0})
+\end{pmatrix}
++
+\begin{pmatrix}
+    x_{0} \\
+    y_{0}
+\end{pmatrix}
+\] 
+
+El movimiento descrito por estas ecuaciones puede verse como órbitas circulares donde su centro depende del empuje incial $\dot\theta_{0}$ que genera el movimiento:
 \begin{equation}
-    I_{m}\ddot\Phi = a\gamma{F_{0}}\sin\theta(t) \qquad \longrightarrow \qquad \dot\Phi(t) = \frac{a\gamma{F_{0}}}{I_{m}\dot\theta_{0}}\cos\theta(t) + \dot\Phi_{0}    ~\nonumber
+    (x(t) - x_{0})^{2} + (y(t) - y_{0})^{2} = \left(a\frac{\dot\Phi_{0}}{\dot\theta_{0}}\right)^{2}\left[2 - 2\cos(\dot\theta_{0}t)\right]~\nonumber
 \end{equation}
+
+\textbf{2. Potencial Lineal:} Asumiendo que $V(x,y) = -F_{0}y$, ahora el multiplicador de Lagrange $\lambda_{2}$ toma un valor diferente:
+\begin{equation}
+    \lambda_{2} = -\lambda{F_{0}}\sin(\dot\theta_{0}t + \theta_{0}),~\nonumber
+\end{equation}
+donde $\lambda$ es la constante que aparece en~\eqref{lambda}. Por ende, la fase media del sistema se integra como:
+\begin{equation}
+    \ddot\Phi = \frac{a\lambda{F_{0}}}{I_{m}}\sin(\dot\theta_{0}t + \theta_{0}) \quad \longrightarrow \quad \dot\Phi(t) = \frac{a\lambda{F_0}}{I_{m}\dot\theta_{0}}\left[\cos(\theta_{0}) - \cos(\dot\theta_{0}t + \theta_{0}) \right] + \dot\Phi_{0} ~\nonumber
+\end{equation}
+\begin{equation}
+    \Phi(t) = \frac{a\lambda{F_0}}{I_{m}\dot\theta_{0}}\left[\cos(\theta_{0})t - \sin(\dot\theta_{0}t + \theta_{0}) + \sin(\theta_{0})\right] + \dot\Phi_{0}t ~\nonumber
+\end{equation}
+Para las posiciones se obtienen las siguientes ecuaciones diferenciales:
+\[
+\begin{pmatrix}
+    \dot{x} \\
+    \dot{y}
+\end{pmatrix} = \frac{a\lambda{F_0}}{I_{m}\dot\theta_{0}}\left[\cos(\theta_{0}) - \cos(\dot\theta_{0}t + \theta_{0}) \right]
+\begin{pmatrix}
+    \cos(\dot\theta_{0}t + \theta_0) \\
+    \sin(\dot\theta_{0}t + \theta_0)
+\end{pmatrix} + \dot\Phi_{0}
+\begin{pmatrix}
+    1 \\
+    1
+\end{pmatrix},
+\]
+cuyas soluciones son:
+\[
+\begin{aligned}
+x(t) & = x_0 + \dot\Phi_{0}t + \frac{a\lambda{F_0}}{I_m\dot{\theta}_0} \left[\frac{\cos(\theta_0)\sin(\dot\theta_{0}t + \theta_0)}{\dot\theta_{0}} - \frac{\sin(2(\dot\theta_{0}t + \theta_0))}{4\dot\theta_{0}} - \frac{t}{2} - \frac{\sin(2\theta_{0})}{4\dot\theta_{0}}\right], \\
+    y(t) & = y_0 + \dot\Phi_0t + \frac{a\lambda F_0}{I_m\dot{\theta}_0}\left[\frac{\cos(2(\dot\theta_{0} t + \theta_0))}{4\dot{\theta}_0} - \frac{\cos(\theta_0)\cos(\dot\theta_{0}t + \theta_{0})}{\dot{\theta}_0} + \frac{\sin^{2}(\theta_{0}) + 3\cos^{2}(\theta_{0})}{4\dot\theta_{0}}
+\right].
+\end{aligned}
+\]
+
+\textbf{3. Potencial Armónico:} Asumiendo que $V(x,y) = k(x^{2} + y^{2})/2$, ahora el multiplicador de Lagrange $\lambda_{2}$ toma la forma:
+\begin{equation}
+    \lambda_{2} = \lambda{k}(x\cos(\dot\theta_{0}t + \theta_{0}) + y\sin(\dot\theta_{0}t + \theta_{0})). ~\nonumber
+\end{equation}
+
+Con este valor, la fase media del centro de masa se halla con un pequeño truco que surge de derivar dos veces con respecto al tiempo:
+\begin{equation}
+    \ddot{\Phi} = -\frac{a\lambda{k}}{I_m}(x\cos(\dot\theta_{0}t + \theta_{0}) + y\sin(\dot\theta_{0}t + \theta_{0}))~\nonumber
+\end{equation}
+\begin{equation}
+    \dddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left[(\dot{x}\cos(\dot\theta_{0}t + \theta_{0}) + \dot{y}\sin(\dot\theta_{0}t + \theta_{0})) + \dot\theta_{0}(-x\sin(\dot\theta_{0}t + \theta_{0}) + y\cos(\dot\theta_{0}t + \theta_{0}))\right]
+\end{equation}
+El primer paréntesis está relacionado con la ligadura $f_{2}$, mientras que el segundo se relaciona con un producto punto:  
+\begin{equation}
+    \dddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left[a\dot\Phi(t) + \dot\theta_{0}(\vec{R}\cdot\hat\theta)\right] \quad \longrightarrow \quad \ddddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left[a\ddot\Phi(t) + \dot\theta_{0}\left((\dot{\vec{R}}\cdot\hat\theta) + (\vec{R}\cdot\dot{\hat\theta})\right)\right]
+\end{equation}
+
+
+
 
 \end{document}

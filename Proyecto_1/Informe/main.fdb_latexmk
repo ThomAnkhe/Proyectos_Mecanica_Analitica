@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1770905067.42082 "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto #1/main.tex" "main.pdf" "main" 1770905068.6415 0
-  "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770904517 159155 3547ee33dc7379664ea0cbc2fad66270 ""
+["pdflatex"] 1770922943.24771 "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" "main.pdf" "main" 1770922946.99206 0
+  "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770907658 159155 3547ee33dc7379664ea0cbc2fad66270 ""
   "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1770897933 13335798 d57db6c08f8c4d8f7f440b8875568bf0 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newpx/px-lms.enc" 1762693727 3877 2ca811886181a05a861d20a35de75e06 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc" 1736607166 3136 bbe665bd0bb471a2da1e8fd326cff9fa ""
@@ -20,6 +20,7 @@
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/tfm/public/newpx/NewPXMI.tfm" 1762693727 1160 c2197cdaa08622262260a0a34b1dfcef ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/tfm/public/newpx/NewPXMI_gnu.tfm" 1762693727 748 0258bafb3cb53bfddd528993739cf619 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/tfm/public/newpx/pxmiaX.tfm" 1762693727 1732 18a727750846a1c3e7271725c4449898 ""
+  "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/tfm/public/newpx/zpl-Bold-tlf-sc-t1.tfm" 1762693727 12908 d443de07a911bb54396bfb496df0afec ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm" 1762693727 11388 be91cbda0b83da460f6a2d7083292202 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/tfm/public/newpx/zpl-Regular-tlf-sc-t1.tfm" 1762693727 13076 5d7885d8b4daffc0e1ac23ffd86f9c1b ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm" 1762693727 12212 23628103ecb97b5e11ff6b34661881c2 ""
@@ -176,6 +177,8 @@
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty" 1768987099 6558 45786cbbf5684a09ee65aa45a7b367e0 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xparse.sty" 1761203377 10176 c2fc1c663b3f3899ddac6e6ed3fb1d7e ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/marvosym/marvosym.sty" 1333353961 9393 ceaf2ea8eb2c81fdb168323fc5fffc89 ""
+  "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/mathtools/mathtools.sty" 1728300125 62711 3b0ed1d68b598a75677c10d16646d5e5 ""
+  "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/mathtools/mhsetup.sty" 1728300125 5582 a43dedf8e5ec418356f1e9dfe5d29fc3 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/mweights/mweights.sty" 1570501985 4953 67f29a12ea26221103fce6bae3433e60 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/newpx/lmsnpxsy.fd" 1762693727 694 74f1360ae44f64fd2ee5afe681f49916 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/newpx/lmxnpxexx.fd" 1762693727 690 f81411dddf695b387c215e4d3b12bf7b ""
@@ -202,6 +205,7 @@
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1756451144 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1751104012 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
+  "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1761901070 10374 2ffd4f27c7f90b8a300608069537743c ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1761901070 33142 efe8f4750fc02524935e7423b4bdef69 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/wasysym/uwasy.fd" 1579693002 2296 c50bf1089c7a46a0d4e9a119e980be4e ""
@@ -210,10 +214,10 @@
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto #1/main.tex" 1770905065 11925 b3aab2e3f3f3e6ce0924d322f8181fd0 ""
-  "main.aux" 1770905068 1281 42ae5f21745f0b14c3ad2c3b87d88d86 "pdflatex"
-  "main.out" 1770905068 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1770905065 11925 b3aab2e3f3f3e6ce0924d322f8181fd0 ""
+  "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" 1770922941 16204 aa7c6b3e1da44ed6b93199f2d48a78f0 ""
+  "main.aux" 1770922946 1411 deb5616b061365d10081375e58a09c04 "pdflatex"
+  "main.out" 1770922945 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1770922941 16204 aa7c6b3e1da44ed6b93199f2d48a78f0 ""
   "tikz/physic_system.tex" 1770901731 2898 0ecd2dd797f52b1f10d473a42353dbe5 ""
   (generated)
   "main.aux"
