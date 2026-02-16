@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.12)  12 FEB 2026 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.15)  16 FEB 2026 07:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1018,22 +1018,62 @@ l.239 \begin{equation}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 \begin{equation}
+l.260 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 \begin{equation}
+l.260 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 \begin{equation}
+l.260 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 \begin{equation}
+l.260 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.265 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.265 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.265 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.265 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.268 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.268 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.268 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.268 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
@@ -1058,28 +1098,73 @@ l.272 \begin{equation}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.275 \begin{equation}
+l.276 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.275 \begin{equation}
+l.276 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.275 \begin{equation}
+l.276 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.275 \begin{equation}
+l.276 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.280 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.280 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.280 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.280 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 \begin{equation}
                        [4
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.286 \end{document}
-                    ] (main.aux)
+l.306 \end{align*}
+                  ]
+Overfull \hbox (20.76495pt too wide) detected at line 312
+[]
+ []
+
+[5] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1093,17 +1178,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27667 strings out of 467866
- 505898 string characters out of 5416389
- 879694 words of memory out of 5000000
- 55878 multiletter control sequences out of 15000+600000
+ 27669 strings out of 467866
+ 505950 string characters out of 5416389
+ 882693 words of memory out of 5000000
+ 55880 multiletter control sequences out of 15000+600000
  688362 words of font info for 134 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 84i,10n,94p,695b,1029s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,94p,695b,1029s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/newpx/NewPXMI.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/newpx/NewPXMI_gnu.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/newpx/pxmiaX.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/newpx/pxsys.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txexs.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/newpx/zplb.pfb><C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/type1/public/newpx/zplr.pfb>
-Output written on main.pdf (4 pages, 195705 bytes).
+Output written on main.pdf (5 pages, 200382 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
  18 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

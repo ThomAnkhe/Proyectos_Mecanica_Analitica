@@ -96,7 +96,7 @@ Con estos vectores en mente, las restricciones pueden reescribirse en la siguien
     \dot{\vec{r}}_{2}  = \dot{\vec{R}} - b\dot{\hat{\theta}} = \dot{\vec{R}} + b\dot{\theta}\hat{n} = a\dot\phi_{2}\hat{n} \quad \longrightarrow \quad \boxed{(\dot{\vec{R}}\cdot\hat{n}) + b\dot{\theta} = a\dot\phi_{2}}~\label{pre-ligadura2}
 \end{equation}
 \begin{equation}
-    \dot{\vec{r}}_{\text{pc}|1}\cdot\hat{\theta}  = (\dot{\vec{R}} - b\dot{\hat{\theta}})\cdot\hat{\theta} = 0 \quad \longrightarrow \quad \boxed{(\dot{\vec{R}}\cdot\hat{\theta}) = 0}  
+    \dot{\vec{r}}_{1}\cdot\hat{\theta}  = (\dot{\vec{R}} - b\dot{\hat{\theta}})\cdot\hat{\theta} = 0 \quad \longrightarrow \quad \boxed{(\dot{\vec{R}}\cdot\hat{\theta}) = 0}  
 \end{equation}
 
 Para analizar la dinámica del sistema de una forma más cómoda, se propone escribir todo en términos de las coordenadas generalizadas $\mathbf{q} = (x, y, \theta, \Phi, \psi)$, donde las nuevas variables angulares se escriben como:
@@ -105,7 +105,7 @@ Para analizar la dinámica del sistema de una forma más cómoda, se propone esc
 \end{equation}
 correspondientes a la fase media y la diferencia de fase entre las ruedas $1$ y $2$ respectivamente. Las ligaduras pueden ser reescritas en estas nuevas variables sumando y restando las ecuaciones~\eqref{pre-ligadura1} y~\eqref{pre-ligadura2}, lo cual genera las expresiones:
 \begin{equation}
-    2(\vec{R}\cdot\hat{n}) = a(\dot\phi_{1} + \dot\phi_{2}) \qquad \longrightarrow \qquad \boxed{(\vec{R}\cdot\hat{n}) = a\dot\Phi} ~\nonumber
+    2(\dot{\vec{R}}\cdot\hat{n}) = a(\dot\phi_{1} + \dot\phi_{2}) \qquad \longrightarrow \qquad \boxed{(\dot{\vec{R}}\cdot\hat{n}) = a\dot\Phi} ~\nonumber
 \end{equation}
 \begin{equation}
    -2b\dot\theta = a(\dot\phi_{1} - \dot\phi_{2}) \qquad \longrightarrow \qquad \boxed{\dot\theta = -\frac{a}{2b}\dot\psi} ~\nonumber
@@ -131,7 +131,7 @@ Por otra parte, para estudiar la dinámica del sistema y ver cómo se comportan 
 \end{equation}
 Para reescribir en términos de $\dot\Phi$ es necesario escribir la suma de cuadrados entre $\dot\phi_{1}$ y $\dot\phi_{2}$ en términos de $\dot\Phi$ y $\dot\psi$, para luego eliminar $\dot\psi$ usando $f_{3}$, de modo que:
 \begin{equation}
-    \dot\phi_{1}^{2} + \dot\phi_{2}^{2} = \frac{1}{2}\left[(2\dot\Phi)^{2} + \dot\psi^{2}\right] = \frac{1}{2}\left[(2\dot\Phi)^{2} + \left(\frac{2b}{1}\right)^{2}\dot\theta^{2}\right].~\nonumber
+    \dot\phi_{1}^{2} + \dot\phi_{2}^{2} = \frac{1}{2}\left[(2\dot\Phi)^{2} + \dot\psi^{2}\right] = \frac{1}{2}\left[(2\dot\Phi)^{2} + \left(\frac{2b}{a}\right)^{2}\dot\theta^{2}\right].~\nonumber
 \end{equation}
 Reescribiendo el Lagrangiano\footnote{Para el paso a paso explícito de todos los procesos, revisar el archivo PDF anexado como material suplementario en el repositorio de \href{https://github.com/ThomAnkhe/Proyectos_Mecanica_Analitica/tree/main/Proyecto_1}{GitHub}.}, su expresión resulta en:
 \begin{equation}
@@ -207,7 +207,7 @@ Se asumirá en este y todos los demás casos que $\Phi_{0} = 0$. Con esto presen
     x(t) \\
     y(t)
 \end{pmatrix} 
-= a\frac{\dot\Phi_{0}}{\dot\phi_{0}}
+= a\frac{\dot\Phi_{0}}{\dot\theta_{0}}
 \begin{pmatrix}
     \sin(\dot\theta_{0}t + \theta_{0}) \\
     -\cos(\dot\theta_{0}t + \theta_{0})
@@ -244,24 +244,17 @@ Para las posiciones se obtienen las siguientes ecuaciones diferenciales:
 \begin{pmatrix}
     \dot{x} \\
     \dot{y}
-\end{pmatrix} = \frac{a\lambda{F_0}}{I_{m}\dot\theta_{0}}\left[\cos(\theta_{0}) - \cos(\dot\theta_{0}t + \theta_{0}) \right]
+\end{pmatrix} = a\left[\frac{a\lambda{F_0}}{I_{m}\dot\theta_{0}}\left(\cos(\theta_{0}) - \cos(\dot\theta_{0}t + \theta_{0})\right) +  \dot\Phi_{0} \right]
 \begin{pmatrix}
     \cos(\dot\theta_{0}t + \theta_0) \\
     \sin(\dot\theta_{0}t + \theta_0)
-\end{pmatrix} + \dot\Phi_{0}
-\begin{pmatrix}
-    1 \\
-    1
 \end{pmatrix},
 \]
 cuyas soluciones son:
-\[
-\begin{aligned}
-x(t) & = x_0 + \dot\Phi_{0}t + \frac{a\lambda{F_0}}{I_m\dot{\theta}_0} \left[\frac{\cos(\theta_0)\sin(\dot\theta_{0}t + \theta_0)}{\dot\theta_{0}} - \frac{\sin(2(\dot\theta_{0}t + \theta_0))}{4\dot\theta_{0}} - \frac{t}{2} - \frac{\sin(2\theta_{0})}{4\dot\theta_{0}}\right], \\
-    y(t) & = y_0 + \dot\Phi_0t + \frac{a\lambda F_0}{I_m\dot{\theta}_0}\left[\frac{\cos(2(\dot\theta_{0} t + \theta_0))}{4\dot{\theta}_0} - \frac{\cos(\theta_0)\cos(\dot\theta_{0}t + \theta_{0})}{\dot{\theta}_0} + \frac{\sin^{2}(\theta_{0}) + 3\cos^{2}(\theta_{0})}{4\dot\theta_{0}}
-\right].
-\end{aligned}
-\]
+\begin{align*}
+x(t) & = x_{0} + a\left(\frac{a\lambda{F_0}\cos\theta_{0}}{I_{m}\dot\theta_{0}^2} + \frac{\dot{\Phi}_0}{\dot\theta_{0}}\right) \left[\sin(\dot\theta_{0}t + \theta_{0}) - \sin \theta_{0}\right] - \frac{a^{2}\lambda{F_0}}{2I_{m}\dot\theta_{0}} \left[t + \frac{\sin(2(\dot{\theta}_0 t + \theta_0)) - \sin(2\theta_0)}{2\dot{\theta}_0}\right] \\
+y(t) & = y_{0} - a\left(\frac{a\lambda{F_0}\cos\theta_0}{I_m\dot\theta_{0}^2} + \frac{\dot{\Phi}_0}{\dot{\theta}_0}\right)\left[\cos(\dot{\theta}_0 t + \theta_0) - \cos\theta_0 \right] + \frac{a^{2}\lambda{F_0}}{4I_m\dot\theta_{0}^2} \left[\cos(2(\dot{\theta}_0 t + \theta_0)) - \cos(2\theta_0) \right]
+\end{align*}
 
 \textbf{3. Potencial Armónico:} Asumiendo que $V(x,y) = k(x^{2} + y^{2})/2$, ahora el multiplicador de Lagrange $\lambda_{2}$ toma la forma:
 \begin{equation}
@@ -270,17 +263,51 @@ x(t) & = x_0 + \dot\Phi_{0}t + \frac{a\lambda{F_0}}{I_m\dot{\theta}_0} \left[\fr
 
 Con este valor, la fase media del centro de masa se halla con un pequeño truco que surge de derivar dos veces con respecto al tiempo:
 \begin{equation}
-    \ddot{\Phi} = -\frac{a\lambda{k}}{I_m}(x\cos(\dot\theta_{0}t + \theta_{0}) + y\sin(\dot\theta_{0}t + \theta_{0}))~\nonumber
+    \ddot{\Phi}(t) = -\frac{a\lambda{k}}{I_m}(x\cos(\dot\theta_{0}t + \theta_{0}) + y\sin(\dot\theta_{0}t + \theta_{0})) = -\frac{a\lambda{k}}{I_{m}}\left(\vec{R}\cdot\hat{n}\right)~\nonumber
 \end{equation}
 \begin{equation}
-    \dddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left[(\dot{x}\cos(\dot\theta_{0}t + \theta_{0}) + \dot{y}\sin(\dot\theta_{0}t + \theta_{0})) + \dot\theta_{0}(-x\sin(\dot\theta_{0}t + \theta_{0}) + y\cos(\dot\theta_{0}t + \theta_{0}))\right]
+    \dddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left[(\dot{\vec{R}}\cdot\hat{n}) + \dot\theta_{0}(\vec{R}\cdot\hat\theta)\right]~\nonumber
 \end{equation}
-El primer paréntesis está relacionado con la ligadura $f_{2}$, mientras que el segundo se relaciona con un producto punto:  
+El primer término está relacionado con $f_{2}$:
 \begin{equation}
-    \dddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left[a\dot\Phi(t) + \dot\theta_{0}(\vec{R}\cdot\hat\theta)\right] \quad \longrightarrow \quad \ddddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left[a\ddot\Phi(t) + \dot\theta_{0}\left((\dot{\vec{R}}\cdot\hat\theta) + (\vec{R}\cdot\dot{\hat\theta})\right)\right]
+    \dddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left[a\dot\Phi(t) + \dot\theta_{0}(\vec{R}\cdot\hat\theta)\right] \quad \longrightarrow \quad \ddddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left[a\ddot\Phi(t) + \dot\theta_{0}\left((\dot{\vec{R}}\cdot\hat\theta) + (\vec{R}\cdot\dot{\hat\theta})\right)\right],~\nonumber
+\end{equation}
+donde el primer término del paréntesis se anula por ser exactamente $f_1$, y el segundo se puede reescribir considerando que $\dot{\hat{\theta}} = -\dot{\theta}_{0}\hat{n}$, por tanto:
+\begin{equation}
+    \ddddot\Phi(t) = -\frac{a\lambda{k}}{I_{m}}\left(a - \frac{\dot\theta_{0}I_{m}}{a\lambda{k}}\right)\ddot\Phi(t) = -\left(\frac{a^{2}\lambda{k}}{I_{m}} - \dot\theta_{0}\right)\ddot\Phi(t) = -\Omega^{2}\ddot\Phi(t).~\nonumber
+\end{equation}
+De esta forma se llega a una ecuación armónica para $\ddot\Phi(t)$, la cual conduce a soluciones de la forma:
+\begin{equation}
+    \ddot\Phi(t) = \frac{\ddot\Phi_{0}}{\cos(\delta)}\cos(\Omega{t} + \delta) \quad \longrightarrow \quad \dot\Phi(t) = \frac{\ddot\Phi_{0}}{\Omega\cos(\delta)}\sin(\Omega{t} + \delta) - \frac{\ddot\Phi_{0}}{\Omega}\tan(\delta) + \dot\Phi_{0} ~\nonumber
+\end{equation}
+\begin{equation}
+    \Phi(t) = -\frac{\ddot\Phi_{0}}{\Omega^{2}\cos(\delta)}\cos(\Omega{t} + \delta) + \left[\dot\Phi_{0} - \frac{\ddot\Phi_{0}}{\Omega}\tan(\delta)\right]t + \frac{\ddot\Phi_{0}}{\Omega^{2}} ~\nonumber
 \end{equation}
 
+Para las posiciones se obtienen las siguientes ecuaciones diferenciales:
+\[
+\begin{pmatrix}
+    \dot{x} \\
+    \dot{y}
+\end{pmatrix} = \left[\frac{\ddot\Phi_{0}}{\Omega\cos(\delta)}\sin(\Omega{t} + \delta) - \frac{\ddot\Phi_{0}}{\Omega}\tan(\delta) + \dot\Phi_{0}\right]
+\begin{pmatrix}
+    \cos(\dot\theta_{0}t + \theta_0) \\
+    \sin(\dot\theta_{0}t + \theta_0)
+\end{pmatrix},
+\]
 
+con soluciones, para el caso de no resonancia ($\Omega \neq \dot\theta_{0}$):
 
+\begin{align*}
+x(t) = x_0 &+ \frac{a}{\dot{\theta}_0} \left( \dot{\Phi}_0 - \frac{\ddot{\Phi}_0 \tan \delta}{\Omega} \right) \left[ \sin(\dot{\theta}_0 t + \theta_0) - \sin \theta_0 \right] \notag \\
+&+ \frac{a\ddot{\Phi}_0}{2 \Omega \cos \delta} \left[ \frac{\cos(\delta + \theta_0) - \cos((\Omega + \dot{\theta}_0)t + \delta + \theta_0)}{\Omega + \dot{\theta}_0} + \frac{\cos(\delta - \theta_0) - \cos((\Omega - \dot{\theta}_0)t + \delta - \theta_0)}{\Omega - \dot{\theta}_0} \right] \\[15pt]
+y(t) = y_0 &- \frac{a}{\dot{\theta}_0} \left( \dot{\Phi}_0 - \frac{\ddot{\Phi}_0 \tan \delta}{\Omega} \right) \left[ \cos(\dot{\theta}_0 t + \theta_0) - \cos \theta_0 \right] \notag \\
+&+ \frac{a\ddot{\Phi}_0}{2 \Omega \cos \delta} \left[ \frac{\sin((\Omega - \dot{\theta}_0)t + \delta - \theta_0) - \sin(\delta - \theta_0)}{\Omega - \dot{\theta}_0} - \frac{\sin((\Omega + \dot{\theta}_0)t + \delta + \theta_0) - \sin(\delta + \theta_0)}{\Omega + \dot{\theta}_0} \right],
+\end{align*}
 
+mientras que para el caso resonante ($\Omega = \dot\theta_{0}$):
+\begin{align*}
+x(t) & = x_0 + \frac{a}{\dot{\theta}_0} \left( \dot{\Phi}_0 - \frac{\ddot{\Phi}_0 \tan \delta}{\dot{\theta}_0} \right) \left[ \sin(\dot{\theta}_0 t + \theta_0) - \sin \theta_0 \right] + \frac{a\ddot{\Phi}_0}{2 \dot{\theta}_0 \cos \delta} \left[ t \sin(\delta - \theta_0) + \frac{\cos(\delta + \theta_0) - \cos(2\dot{\theta}_0 t + \delta + \theta_0)}{2\dot{\theta}_0} \right] \\
+y(t) & = y_0 - \frac{a}{\dot{\theta}_0} \left( \dot{\Phi}_0 - \frac{\ddot{\Phi}_0 \tan \delta}{\dot{\theta}_0} \right) \left[ \cos(\dot{\theta}_0 t + \theta_0) - \cos \theta_0 \right] + \frac{a\ddot{\Phi}_0}{2 \dot{\theta}_0 \cos \delta} \left[ t \cos(\delta - \theta_0) - \frac{\sin(2\dot{\theta}_0 t + \delta + \theta_0) - \sin(\delta + \theta_0)}{2\dot{\theta}_0} \right]
+\end{align*}
 \end{document}

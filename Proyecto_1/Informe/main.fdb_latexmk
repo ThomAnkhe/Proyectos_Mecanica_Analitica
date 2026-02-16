@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1770922943.24771 "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" "main.pdf" "main" 1770922946.99206 0
-  "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770907658 159155 3547ee33dc7379664ea0cbc2fad66270 ""
-  "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1770897933 13335798 d57db6c08f8c4d8f7f440b8875568bf0 ""
+["pdflatex"] 1771245311.90794 "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" "main.pdf" "main" 1771245314.99279 0
+  "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771150686 157504 5f21e678cb1906e8493b2b291deb17ef ""
+  "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1771150460 13335798 52844b9b79b1bd9c4a4ce2e152b292ae ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newpx/px-lms.enc" 1762693727 3877 2ca811886181a05a861d20a35de75e06 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc" 1736607166 3136 bbe665bd0bb471a2da1e8fd326cff9fa ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1736607166 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
@@ -214,10 +214,10 @@
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" 1770922941 16204 aa7c6b3e1da44ed6b93199f2d48a78f0 ""
-  "main.aux" 1770922946 1411 deb5616b061365d10081375e58a09c04 "pdflatex"
-  "main.out" 1770922945 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1770922941 16204 aa7c6b3e1da44ed6b93199f2d48a78f0 ""
+  "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" 1771245310 19505 9393d806bf80b70c8cbdd4772b013b13 ""
+  "main.aux" 1771245314 1411 9c43d764cfb750e3eec41ffae62db2ab "pdflatex"
+  "main.out" 1771245314 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1771245310 19505 9393d806bf80b70c8cbdd4772b013b13 ""
   "tikz/physic_system.tex" 1770901731 2898 0ecd2dd797f52b1f10d473a42353dbe5 ""
   (generated)
   "main.aux"
