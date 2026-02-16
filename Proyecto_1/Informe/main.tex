@@ -253,8 +253,9 @@ Para las posiciones se obtienen las siguientes ecuaciones diferenciales:
 cuyas soluciones son:
 \begin{align*}
 x(t) & = x_{0} + a\left(\frac{a\lambda{F_0}\cos\theta_{0}}{I_{m}\dot\theta_{0}^2} + \frac{\dot{\Phi}_0}{\dot\theta_{0}}\right) \left[\sin(\dot\theta_{0}t + \theta_{0}) - \sin \theta_{0}\right] - \frac{a^{2}\lambda{F_0}}{2I_{m}\dot\theta_{0}} \left[t + \frac{\sin(2(\dot{\theta}_0 t + \theta_0)) - \sin(2\theta_0)}{2\dot{\theta}_0}\right] \\
-y(t) & = y_{0} - a\left(\frac{a\lambda{F_0}\cos\theta_0}{I_m\dot\theta_{0}^2} + \frac{\dot{\Phi}_0}{\dot{\theta}_0}\right)\left[\cos(\dot{\theta}_0 t + \theta_0) - \cos\theta_0 \right] + \frac{a^{2}\lambda{F_0}}{4I_m\dot\theta_{0}^2} \left[\cos(2(\dot{\theta}_0 t + \theta_0)) - \cos(2\theta_0) \right]
+y(t) & = y_{0} - a\left(\frac{a\lambda{F_0}\cos\theta_0}{I_m\dot\theta_{0}^2} + \frac{\dot{\Phi}_0}{\dot{\theta}_0}\right)\left[\cos(\dot{\theta}_0 t + \theta_0) - \cos\theta_0 \right] + \frac{a^{2}\lambda{F_0}}{4I_m\dot\theta_{0}^2} \left[\cos(2(\dot{\theta}_0 t + \theta_0)) - \cos(2\theta_0) \right].
 \end{align*}
+Estas trayectorias son muy similares al patrón con el que uno usualmente dibuja resortes.
 
 \textbf{3. Potencial Armónico:} Asumiendo que $V(x,y) = k(x^{2} + y^{2})/2$, ahora el multiplicador de Lagrange $\lambda_{2}$ toma la forma:
 \begin{equation}
@@ -305,9 +306,10 @@ y(t) = y_0 &- \frac{a}{\dot{\theta}_0} \left( \dot{\Phi}_0 - \frac{\ddot{\Phi}_0
 &+ \frac{a\ddot{\Phi}_0}{2 \Omega \cos \delta} \left[ \frac{\sin((\Omega - \dot{\theta}_0)t + \delta - \theta_0) - \sin(\delta - \theta_0)}{\Omega - \dot{\theta}_0} - \frac{\sin((\Omega + \dot{\theta}_0)t + \delta + \theta_0) - \sin(\delta + \theta_0)}{\Omega + \dot{\theta}_0} \right],
 \end{align*}
 
-mientras que para el caso resonante ($\Omega = \dot\theta_{0}$):
+donde las trayectorias muestran estructuras similares a flores polares (aunque más bien serían como mandalas), mientras para el caso resonante ($\Omega = \dot\theta_{0}$):
 \begin{align*}
 x(t) & = x_0 + \frac{a}{\dot{\theta}_0} \left( \dot{\Phi}_0 - \frac{\ddot{\Phi}_0 \tan \delta}{\dot{\theta}_0} \right) \left[ \sin(\dot{\theta}_0 t + \theta_0) - \sin \theta_0 \right] + \frac{a\ddot{\Phi}_0}{2 \dot{\theta}_0 \cos \delta} \left[ t \sin(\delta - \theta_0) + \frac{\cos(\delta + \theta_0) - \cos(2\dot{\theta}_0 t + \delta + \theta_0)}{2\dot{\theta}_0} \right] \\
-y(t) & = y_0 - \frac{a}{\dot{\theta}_0} \left( \dot{\Phi}_0 - \frac{\ddot{\Phi}_0 \tan \delta}{\dot{\theta}_0} \right) \left[ \cos(\dot{\theta}_0 t + \theta_0) - \cos \theta_0 \right] + \frac{a\ddot{\Phi}_0}{2 \dot{\theta}_0 \cos \delta} \left[ t \cos(\delta - \theta_0) - \frac{\sin(2\dot{\theta}_0 t + \delta + \theta_0) - \sin(\delta + \theta_0)}{2\dot{\theta}_0} \right]
+y(t) & = y_0 - \frac{a}{\dot{\theta}_0} \left( \dot{\Phi}_0 - \frac{\ddot{\Phi}_0 \tan \delta}{\dot{\theta}_0} \right) \left[ \cos(\dot{\theta}_0 t + \theta_0) - \cos \theta_0 \right] + \frac{a\ddot{\Phi}_0}{2 \dot{\theta}_0 \cos \delta} \left[ t \cos(\delta - \theta_0) - \frac{\sin(2\dot{\theta}_0 t + \delta + \theta_0) - \sin(\delta + \theta_0)}{2\dot{\theta}_0} \right],
 \end{align*}
+el cual muestra trayecorias abiertas que son muy similares a las del porencial lineal, sólo que en diagonal y con formas menos uniformes.
 \end{document}

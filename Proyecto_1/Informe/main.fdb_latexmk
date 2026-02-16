@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1771245311.90794 "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" "main.pdf" "main" 1771245314.99279 0
+["pdflatex"] 1771252803.1075 "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" "main.pdf" "main" 1771252804.49442 0
   "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771150686 157504 5f21e678cb1906e8493b2b291deb17ef ""
   "C:/Users/ThomAnkhe/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1771150460 13335798 52844b9b79b1bd9c4a4ce2e152b292ae ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newpx/px-lms.enc" 1762693727 3877 2ca811886181a05a861d20a35de75e06 ""
@@ -214,10 +214,10 @@
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "C:/Users/ThomAnkhe/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" 1771245310 19505 9393d806bf80b70c8cbdd4772b013b13 ""
-  "main.aux" 1771245314 1411 9c43d764cfb750e3eec41ffae62db2ab "pdflatex"
-  "main.out" 1771245314 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1771245310 19505 9393d806bf80b70c8cbdd4772b013b13 ""
+  "c:/Users/ThomAnkhe/Documents/Repositories/Proyectos_Mecanica_Analitica/Proyecto_1/Informe/main.tex" 1771252802 19846 348595ba2f0cb91f5f89058d35ffc7e1 ""
+  "main.aux" 1771252804 1411 9c43d764cfb750e3eec41ffae62db2ab "pdflatex"
+  "main.out" 1771252804 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1771252802 19846 348595ba2f0cb91f5f89058d35ffc7e1 ""
   "tikz/physic_system.tex" 1770901731 2898 0ecd2dd797f52b1f10d473a42353dbe5 ""
   (generated)
   "main.aux"
